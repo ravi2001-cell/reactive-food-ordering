@@ -33,6 +33,10 @@ npm run dev
 
 Open `http://localhost:5173`. Vite proxies API requests to the backend on port 8080.
 
+The React interface is also published as a static demonstration on
+[GitHub Pages](https://ravi2001-cell.github.io/reactive-food-ordering/). Pages uses
+demo-mode order submission because a static host cannot run the Java backend.
+
 Create an order:
 
 ```bash
