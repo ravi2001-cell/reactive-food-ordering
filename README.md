@@ -37,6 +37,35 @@ The React interface is also published as a static demonstration on
 [GitHub Pages](https://ravi2001-cell.github.io/reactive-food-ordering/). Pages uses
 demo-mode order submission because a static host cannot run the Java backend.
 
+## Run with Docker Compose
+
+Requirements: Docker Engine with the Compose plugin.
+
+```bash
+docker compose up --build -d
+docker compose ps
+```
+
+Open `http://localhost`. Nginx serves the React frontend and proxies `/api`
+requests to the WebFlux backend over the private Compose network.
+
+To use a different host port:
+
+```bash
+APP_PORT=8088 docker compose up --build -d
+```
+
+Then open `http://localhost:8088`.
+
+Useful operations:
+
+```bash
+docker compose logs -f
+docker compose logs -f backend
+docker compose restart backend
+docker compose down
+```
+
 Create an order:
 
 ```bash

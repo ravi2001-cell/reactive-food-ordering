@@ -1,0 +1,10 @@
+.git
+.github
+.idea
+.vscode
+.mvn/apache-maven-*
+frontend
+target
+*.log
+README.md
+compose.yaml
