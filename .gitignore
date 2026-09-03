@@ -2,6 +2,8 @@
 .vscode/
 target/
 .mvn/apache-maven-*/
+frontend/node_modules/
+frontend/dist/
 *.iml
 *.log
 .DS_Store

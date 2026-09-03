@@ -11,6 +11,7 @@ A small, non-blocking food-ordering API built with Java 21, Spring Boot and Spri
 - Prometheus metrics endpoint
 - Automated API tests and GitHub Actions CI
 - Multi-stage, non-root Docker image
+- Responsive React frontend with live filtering, cart calculations and API states
 
 The first version deliberately uses an in-memory repository. PostgreSQL/R2DBC, Kafka, Redis and additional microservices will be introduced incrementally so every architectural change remains understandable and testable.
 
@@ -21,6 +22,16 @@ Requirements: Java 21.
 ```bash
 ./mvnw spring-boot:run
 ```
+
+In another terminal, run the frontend (Node.js 22):
+
+```bash
+cd frontend
+npm ci
+npm run dev
+```
+
+Open `http://localhost:5173`. Vite proxies API requests to the backend on port 8080.
 
 Create an order:
 
